@@ -1,0 +1,17 @@
+{
+    "ethereum": 1,
+    "bsc": 2,
+    "avalanche": 6,
+    "polygon": 9,
+    "arbitrumOne": 10,
+    "optimism": 11,
+  
+    "platon_dev": 10120,
+    "goerli_dev": 10121,
+    "bsc-testnet": 10002,
+    "fuji": 10006,
+    "mumbai_dev": 10109,
+    "arbitrum-rinkeby": 10010,
+    "optimism-kovan": 10011,
+    "moombase_dev": 10126
+  }

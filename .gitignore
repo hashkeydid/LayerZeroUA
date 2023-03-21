@@ -1,0 +1,18 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+
+# Hardhat files
+cache
+artifacts
+deployments
+scripts
+task
+deploy.sh
+setAp.sh
+upgrade.sh
+remix-compiler.config.js
+hardhat.config.js
