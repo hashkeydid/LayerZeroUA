@@ -16,3 +16,10 @@ setAp.sh
 upgrade.sh
 remix-compiler.config.js
 hardhat.config.js
+
+#Foundry files
+foundry.toml
+remappings.txt
+lib
+out
+forge-cache

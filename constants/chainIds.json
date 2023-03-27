@@ -1,17 +1,19 @@
 {
-    "ethereum": 1,
+    "platon": 100,
+    "ethereum": 101,
+    "polygon": 109,
+    "moonbeam": 126,
     "bsc": 2,
     "avalanche": 6,
-    "polygon": 9,
     "arbitrumOne": 10,
     "optimism": 11,
   
-    "platon_dev": 10120,
-    "goerli_dev": 10121,
+    "platon_stg": 10120,
+    "goerli_stg": 10121,
     "bsc-testnet": 10002,
     "fuji": 10006,
-    "mumbai_dev": 10109,
+    "mumbai_stg": 10109,
     "arbitrum-rinkeby": 10010,
     "optimism-kovan": 10011,
-    "moombase_dev": 10126
+    "moombase_stg": 10126
   }
