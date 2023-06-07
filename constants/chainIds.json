@@ -9,11 +9,18 @@
     "optimism": 11,
   
     "platon_stg": 10120,
+    "platon_qa": 10120,
+    "platon_dev": 10120,
     "goerli_stg": 10121,
-    "bsc-testnet": 10002,
-    "fuji": 10006,
+    "goerli_qa": 10121,
+    "goerli_dev": 10121,
     "mumbai_stg": 10109,
-    "arbitrum-rinkeby": 10010,
-    "optimism-kovan": 10011,
-    "moombase_stg": 10126
+    "mumbai_qa": 10109,
+    "mumbai_dev": 10109,
+    "moombase_stg": 10126,
+    "moombase_qa": 10126,
+    "moombase_dev": 10126,
+    "bsctestnet_qa": 10102,
+    "bsctestnet_stg": 10102,
+    "bsctestnet_dev": 10102
   }
