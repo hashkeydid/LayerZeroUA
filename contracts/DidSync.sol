@@ -83,7 +83,7 @@ contract DidSync is NonblockingLzAppUpgradeable, SyncStorage {
         bytes memory payload = abi.encode(_payload);
         // _dstChainId: layer zero trusted remote chain id, initialized PlatON as 100.
         // block.chainid: PlatON chain id.
-        if (_dstChainId != 100 && block.chainid != 210425) {
+        if (_dstChainId != 100 && block.chainid != 210425 && _dstChainId != 10119 && block.chainid != 16688) {
             _lzSend(
                 _dstChainId,
                 payload,
