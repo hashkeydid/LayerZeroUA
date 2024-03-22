@@ -16,11 +16,12 @@ struct Payload {
     IDid.KYCInfo[] KYCInfo;
     bytes[] evidence;
     bytes evidenceLZ;
+    bytes nonEVMAddress;    
 }
 
 contract DidSync is NonblockingLzAppUpgradeable, SyncStorage {
     ///@dev Emmited when user sync KYC information
-    event SendToChain(address user, uint16 indexed dstChainId, uint256 tokenId);
+    event SendToChain(address user, uint16 indexed dstChainId, uint256 tokenId, bytes nonEVMAddress);
     event ReceiveFromChain(
         uint16 _srcChainId,
         bytes srcAddress,
@@ -83,7 +84,9 @@ contract DidSync is NonblockingLzAppUpgradeable, SyncStorage {
         bytes memory payload = abi.encode(_payload);
         // _dstChainId: layer zero trusted remote chain id, initialized PlatON as 100.
         // block.chainid: PlatON chain id.
-        if (_dstChainId != 100 && block.chainid != 210425 && _dstChainId != 99 && block.chainid != 6688) {
+        // testnet
+        // if (_dstChainId != 10120 && block.chainid != 2206132 && _dstChainId != 10119 && block.chainid != 16688 && _dstChainId != 10118)
+       if (_dstChainId != 100 && block.chainid != 210425 && _dstChainId != 99 && block.chainid != 6688 && _dstChainId != 98) {
             _lzSend(
                 _dstChainId,
                 payload,
@@ -95,7 +98,7 @@ contract DidSync is NonblockingLzAppUpgradeable, SyncStorage {
             (bool sent, ) = payable(did).call{value: msg.value}("");
             require(sent, "Failed to send Ether");
         }
-        emit SendToChain(msg.sender, _dstChainId, _payload.tokenId);
+        emit SendToChain(msg.sender, _dstChainId, _payload.tokenId, _payload.nonEVMAddress);
     }
 
     /// @dev Receive KYC information from other chains
